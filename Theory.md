@@ -31,3 +31,12 @@
   ages = [5,31,43,48,50,41,7,11,15,39,80,82,32,2,8,6,25,36,27,61,31]
   x = numpy.percentile(ages, 90)
   print(x)
+## Normal Data Distribution
+- Data where the values are concentrated around a given value
+- Also known as **Gaussian data distribution**
+- A normal distribution graph is also known as the **bell curve**
+- (Do graphical shifts in curve wrt standard deviation and mean) - UCL course
+  
+
+
+
