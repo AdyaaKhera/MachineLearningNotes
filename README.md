@@ -1,7 +1,8 @@
-# Machine Learning Notes
+# Notes
 
-This repository contains my personal notes on Python and Machine Learning.
-It’s written in Markdown and includes runnable Python code blocks.
+This repository contains my personal notes from different resources.
+It’s written in Markdown and includes runnable code blocks.
 
 ## 📚 Contents
-- [Theory](Theory.md)
+- [Machine Learning](Theory.md)
+- [C++]()
