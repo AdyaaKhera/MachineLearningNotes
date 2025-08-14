@@ -1,4 +1,4 @@
-# Theory
+# Machine Learning
 ## Statistics
 ### Standard Deviation
 - Describes how spread out the values are from the mean of data
@@ -192,3 +192,4 @@ Changing data into comparable values
   ```python
   from sklearn.neighbors import KNeighborsClassifier
   
+
