@@ -139,5 +139,56 @@ Changing data into comparable values
 - 2 * ((precision * recall) / (precision + recall))
   ```python
   F1_score = metrics.f1_score(actual, predicted)
-
-
+## Hierarchical Clustering
+- unsupervised learning method for clustering data points
+- model doesn't need to be trained and we don't need a target variable
+### Agglomerative Clustering
+- bottom up approach
+- each data point is considered as its own cluster
+- clusters with the shortest distance between them are merged repeatedly until a single cluster is formed
+- can be depicted using dendograms
+## Logistic Regression
+- helps in solving classification problems
+- unlike linear or polynomial regressions it predicts categorical outcomes
+- the categories must be encoded to numbers
+## K Means
+- unsupervised learning method
+- data points are divided into K clusters by minimizing the variance in each cluster
+- we compute the centroids of initial clusters which are randomly generated and then reassign data points to cluster with the closest centroid
+### Elbow method
+- we graph the inertia
+- the point where it starts decreases linearly is the elbow that is the value we use as K
+## Bagging - Bootstrap Aggregation
+- ensembling method to resolve overfitting in classification and regression problems
+- (Watch video on youtube)
+## Cross Validation
+- To make sure hyperparameter tuning works for the better
+### K-Fold
+- training data in this model is split into k number of smaller sets to validate the model
+- the model is trained on k-1 folds of training set and the last one is used for evaluation
+  ```python
+  from sklearn.model_selection import KFold, cross_val_score
+### Stratified K-Fold
+- K-Fold but we ensure that all sets have an equal proportion of all classes
+### Leave One Out (LOO)
+- leaves only 1 observation to validate and n-1 to train
+### Leave P Out (LPO)
+- uses p number of observations for the validation set
+### Shuffle Split
+- leaves out a percentage of data to not be used in training or validation
+- **check why we leave out a certain percentage and how it helps us**
+## AUC - ROC Curve
+- the curve plots TP vs FP rate at different thresholds
+- the thresholds are probability cutoffs separating various classes
+- uses probability to tell how well the classes are separated
+- a higher AUC score is better as it takes into account the predicted probability
+- **learn more about this**
+## K nearest neighbors (KNN)
+- supervised machine learning algorithm
+- can be used for classification or regression tasks
+- also used in missing value imputation
+- K is the number of nearby observations to be considered
+- Larger values of K are often more robust to outliers and produce more stable decision boundaries than very small values
+  ```python
+  from sklearn.neighbors import KNeighborsClassifier
+  
