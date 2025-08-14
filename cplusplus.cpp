@@ -3,5 +3,5 @@ using namespace std;
 
 int main() {
   cout << "Hello World!";
-  return o
+  return 0;
 }
