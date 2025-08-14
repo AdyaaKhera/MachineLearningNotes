@@ -1,7 +1,39 @@
 # Machine Learning
 
-## Index 
-- [Statistics](https://github.com/AdyaaKhera/Notes.git)  
+## Index
+- [Statistics](#statistics)
+  - [Standard Deviation](#standard-deviation)
+  - [Variance](#variance)
+  - [Standard Deviation vs Variance](#standard-deviation-vs-variance)
+  - [Percentiles](#percentiles)
+  - [Normal Data Distribution](#normal-data-distribution)
+  - [Linear Regression](#linear-regression)
+  - [Polynomial Regression](#polynomial-regression)
+  - [Multiple Regression](#multiple-regression)
+- [Scaling](#scaling)
+  - [Standardization](#standardization)
+- [Evaluation](#evaluation)
+- [Decision Tree](#decision-tree)
+- [Confusion Matrix](#confusion-matrix)
+  - [Accuracy](#accuracy)
+  - [Precision](#precision)
+  - [Recall / Sensitivity](#recall--sensitivity)
+  - [Specificity](#specificity)
+  - [F-Score](#f-score)
+- [Hierarchical Clustering](#hierarchical-clustering)
+  - [Agglomerative Clustering](#agglomerative-clustering)
+- [Logistic Regression](#logistic-regression)
+- [K Means](#k-means)
+  - [Elbow Method](#elbow-method)
+- [Bagging - Bootstrap Aggregation](#bagging---bootstrap-aggregation)
+- [Cross Validation](#cross-validation)
+  - [K-Fold](#k-fold)
+  - [Stratified K-Fold](#stratified-k-fold)
+  - [Leave One Out (LOO)](#leave-one-out-loo)
+  - [Leave P Out (LPO)](#leave-p-out-lpo)
+  - [Shuffle Split](#shuffle-split)
+- [AUC - ROC Curve](#auc---roc-curve)
+- [K Nearest Neighbors (KNN)](#k-nearest-neighbors-knn)
 
 ## Statistics
 ### Standard Deviation
@@ -196,5 +228,6 @@ Changing data into comparable values
   ```python
   from sklearn.neighbors import KNeighborsClassifier
   
+
 
 
