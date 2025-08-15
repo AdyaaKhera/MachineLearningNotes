@@ -16,14 +16,19 @@ cout << "HI! \n";
 cout << "HI!" << "\n";
 cout << "Hello" << endl;
 ```
-- `\n` is called an **escape sequence** which forces the cursor to change its position
-<table>
-  <tr><th>Data Type</th><th>Description</th></tr>
-  <tr><td><code>int</code></td><td>Stores integers (whole numbers), without decimals, such as <code>123</code> or <code>-123</code>.</td></tr>
-  <tr><td><code>double</code></td><td>Stores floating-point numbers, with decimals, such as <code>19.99</code> or <code>-19.99</code>.</td></tr>
-  <tr><td><code>char</code></td><td>Stores single characters, such as <code>'a'</code> or <code>'B'</code>. Char values are surrounded by single quotes.</td></tr>
-  <tr><td><code>string</code></td><td>Stores text, such as <code>"Hello World"</code>. String values are surrounded by double quotes.</td></tr>
-  <tr><td><code>bool</code></td><td>Stores values with two states: <code>true</code> or <code>false</code>.</td></tr>
-</table>
-- Variables should be created in the form `type name = value`
+- `\n` is called an **escape sequence** which moves the cursor to the next line.
+- Variables should be created in the form: `type name = value`
+
+| Data Type | Description |
+|-----------|-------------|
+| `int`     | Stores integers (whole numbers), without decimals, such as `123` or `-123`. |
+| `double`  | Stores floating-point numbers, with decimals, such as `19.99` or `-19.99`. |
+| `char`    | Stores single characters, such as `'a'` or `'B'`. Char values are surrounded by single quotes. |
+| `string`  | Stores text, such as `"Hello World"`. String values are surrounded by double quotes. |
+| `bool`    | Stores values with two states: `true` or `false`. |
+- To display variables while printing them we use ``<<``
+  ```C++
+  int age = 20;
+  cout << "you are" << age << "years old!";
+-
 
