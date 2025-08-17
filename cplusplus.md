@@ -52,7 +52,7 @@ cout << "Hello" << endl;
 - `auto` only works when the value is assigned at the time of variable declaration
 - once a datatype is assigned to a variable, it is fixed.
   
-### Strings
+  ### Strings
 - Strings are objects in C++
 - Other than using `+`, we can also concatenate strings using `append()` function since it's an object
 - the `length()` or `size()` function can be used to find the length of a string
@@ -78,4 +78,79 @@ cout << "Hello" << endl;
 - `>>=` and `<<=` are shorthand bitwise operators used to shift a bit value to the left or right by a certain number
 - Logical Operators are `&&` (and), `||` (or) and `!` (not)
 
+## Math
+- C++ has built in `min()` and `max()` functions
+- `<cmath>` library can be used for other math functions like `sqrt()`, `round()`, `log()`, etc.
 
+## Conditionals
+```C++
+if (condition){
+  //statement
+} elif (other condition) {
+} else {
+//statement
+}
+```
+- There is also a **short-hand if else**, which is known as the **ternary operator** because it consists of three operands
+  ```C++
+  variable = (condition) ? expressionTrue : expressionFalse;
+- syntax for switch-case statements
+  ```C++
+  switch(expression) {
+  case x:
+    // code block
+    break;
+  case y:
+    // code block
+    break;
+  default:
+    // code block to run if no match is found
+  }
+
+## Loops
+- `while` loop goes on for as long as a particular condition is `True`
+  ```C++
+  while (condition) {
+    //tasks to execute if condition is True
+    counter variable increment or decrement
+  }
+- the `while` loop has a variant called the `do/while` loop. It executes once by default and then gets executed for as long as the condition of the while loop is true
+  ```C++
+  do {
+  // code block to be executed
+  // variable increment or decrement
+  }
+  while (condition);
+- `for` loop goes on for a specific number of times
+  ```C++
+  for (intitialize variable; condition; increment or decrement) {
+    //block to be executed
+  }
+- the `foreach` loop is a range-based for loop, used to loop through elements in an array (mainly)
+  ```C++
+  for (type variableName : arrayName) {
+  // code block to be executed
+  }
+  //or we can use foreach with strings since they are also an array of characters
+  string word = "Hello";
+  for (char c : word) {
+    cout << c << "\n";
+  }
+## Arrays
+- we can omit defining the size of the array, the compiler can automate it but it is a good practice to specifiy it
+- we can define an array first and add values to it later but that can't happen without specifying the size of the array while defining it
+- arrays have a fixed size, i.e., we cannot add or remove new elements
+- **vectors** are resizable arrays, i.e., they have a dynamic size and hence we can add or remove elements as we want
+- vectors are part of the `<vector>` library
+- to get the size of an array we can use `sizeof()` operator
+- `sizeof()` returns the size in bytes
+- to get the number of elements in an array we have to divide the size of arrays by the size of the first element
+  ### Multidimensional arrays
+  - a multidimensional array is an array of arrays
+  - To declare a multi-dimensional array, define the variable type, specify the name of the array followed by square brackets which specify how many elements the main array has, followed by another set of square brackets which indicates how many elements the sub-arrays have
+    ```C++
+    datatype arrayname [elements in outer array][elements in inner arrays]
+  - each set of square brackets in an arrays adds a dimension to it
+  - multidimensional arrays are great for representing lists
+
+## Structures or Structs
