@@ -240,3 +240,41 @@ if (condition){
 - `new` and `delete` can also be used with arrays
 - when using with arrays, `new ` and `delete` become `new[]` and `delete[]`
 - manual memory management isn't always required but can be useful when full control over the memory is desired
+
+## Functions
+- functions in C++ are always declared **with** datatypes
+- if a user-defined function is declared after the `main()` function, there will be an error
+- functions can be defined after `main()` but need to be declared before `main()`
+- parameters are specified **with** their datatypes: `void funcname(string parameter1){}`
+- the parameters can also be assigned a default value
+- a parameter with a default value is known as an "optional parameter" since the function will work even if we don't pass an arguement
+- when the function is not a `void` function, it must contain a `return` statement that returns the datatype that was specified while declaring the function
+
+  ### Pass by reference
+  - we can pass a reference a parameter to the function
+  - the passed argument then becomes a reference to the assigned value in the parameter
+    ```C++
+    void changeValue(int &num) {
+    num = 50;
+    }
+    int main() {
+      int value = 10;
+      changeValue(value);  // Call the function and change the value to 50
+      cout << value; 
+      return 0;
+    }
+  - using structs in a function can be useful as it allows us to use a group of variables while only passing the struct variable as an argument
+
+  ### Function overloading
+    - allows multipple functions to have the same name as long as their parameters have different datatypes or number of parameters
+
+  ### Lambda functions
+    - small anonymous function that can be written directly in the code
+    - useful for quick functioning without declaration or definition
+    - for using lambda in a function we need the `<functional>` library as we need `std::functional` to specify the datatype op the function
+    - syntax: `[capture] (arguments) {statemnts to execute}`
+    - the capture clause [] gives lambda the access to variables outside of it so that they can be used
+    - references can also be captured
+    - lambda functions should be only used when they are required only once
+
+## OOP
