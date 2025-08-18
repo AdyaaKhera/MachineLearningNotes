@@ -278,3 +278,21 @@ if (condition){
     - lambda functions should be only used when they are required only once
 
 ## OOP
+- to create a class, we use the `class` keyword, then we use an access specifier and declare the attributes
+  ```C++
+  class MyClass {
+    public: //specifies that the members of the class re accessible from outside the class
+      int mynumber;
+      str mystring;
+  };
+- to create an object of `MyClass`, the class name is specified, followed by the object name: `MyClass myobj;`
+- to access the class attributes we can use the dot syntax: `myobj.mynumber = 10;`
+
+  ### Class Methods
+  - functions that belong to the class are called methods
+  - the methods can be defined inside or outside the class
+    ```C++
+    class MyClass {
+    
+    
+    
