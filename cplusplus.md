@@ -293,6 +293,46 @@ if (condition){
   - the methods can be defined inside or outside the class
     ```C++
     class MyClass {
-    
-    
-    
+      public:
+        int firstatr;
+        void firstfunc() {
+          cout << "I do nothing\n";
+        }
+    };
+  - we can call this method by first creating and object and then calling the function: `myobj.firstfunc();`
+  - to define a methode outside the class, we have to declare it in the class
+  - for function definition outside the class we use the `::` scope resolution operator (just like when we use `cin` and `cout` directly froms `std` instead of `using namespace std`)
+    ```C++
+    class myclass {
+      public:
+        void mymethod();
+    };
+
+    void myclass::mymethod() {
+      cout << "I also do nothing\n";
+    }
+    ```
+    ### Constructors
+    - constructor is a special method that is automatically called when an object is created
+    - a constructor has the same name as the class followed b a parenthesis
+      ```C++
+      class myclass {
+        public:
+          myclass() { //this is the constructor
+            cout << "why would I do anything?\n";
+          }
+      };
+    - the constructor has **no** return type and is usually declared public
+    - constructors can also be defined outside the class since they are also methods
+    - constructors can also be overloaded
+
+    ### Access Specifiers
+    - access specifiers control how the members of a class are accessed
+    - there are three access specifiers
+    - `public` - members ae accessible from outside the class
+    - `private` - members cannot be accessed or viewed from outside the class
+    - `protected` - members cannot be accessed from outside but can be accessed in inherited classes
+    - by default the attributes are `private`
+   
+    ### Encapsulation
+    - 
