@@ -154,3 +154,89 @@ if (condition){
   - multidimensional arrays are great for representing lists
 
 ## Structures or Structs
+- structs are a way to group related variables
+- each variable is called a member of the structure
+- structs can contain different datatypes
+  ```C++
+  struct {
+    int intvariable;
+    str stringvariable;
+    float loatvariable;
+    structvar; 
+  }
+- to access a struct member we just say `structvar.variableName`
+- we can also use one struct for many variables; just add however many structnames required separated by a comma as the last line of the struct
+  ### Named Structs
+  - by naming a struct we can create variables with that structure any time
+    ```C++
+    struct structname {
+      //struct contents
+    }
+  - to declare a variable using that struct we can just say `structname varname;` by using the struct name as a datatype
+ 
+## Enumeration (enum)
+- enum is a group of constants
+  ```C++
+  enum myconsts {
+    const1,
+    const2,
+    const3
+  };
+- in order to use the enum we need to create an enum variable `enum enum_name var_name = const1;`
+- the created variable can then have any of the values present in the enum
+- by default, the first value in the enum will have a value of 0, the second wil have 1 and so on
+- these default values can be changed where the enum is defined
+  ```C++
+  enum myconsts {
+    const1 = 100,
+    const2 = 25,
+    const3 = 50
+  };
+- if we only assign the first constant a value, the next ones will take the preceding values by default
+
+## References
+- a reference is an alias for an existing variable
+- a reference is creating using `&`
+  ```C++
+  string something = "something";
+  string &alias_something = something;
+- once the reference has been made, the reference or the original varible, either can be used as both refer to the same memory location
+- references give us the ability to manupulate the data in the computer's memory which can reduce code and improve the performance. This is one of the things in C++ that it is known for
+
+## Memory Address
+- we can use the `&` operator to access the memory address of a particular variable
+- the memory address is in hexadecimal form
+
+## Pointers
+- a pointer is a variable that stores the memory address as its value
+- a pointer points to a data type of the same type and is created with `*` operator
+  ```C++
+  string something = "something";
+  string* &also_something = something; //this is a pointer
+- **the type of pointer has to match the type of the variable**
+- when we change the pointer value, it changes the value of the original variable
+
+  ### Dereference
+  - a pointer stores the memory address of a variable but we can use `*`, the dereference operator, with a pointer to get the variable value
+    ```C++
+    string something = "something";
+    string* &also_something = something; //this is a pointer
+    cout << *also_something; //this is a dereference and this will say "something"
+
+## Memory Management 
+- it is the process of controlling how much memory a program uses and how it's used
+- it includes creating, using and releasing memory when not in use
+- we can use the `new` keyword to create memory space
+  ```C++
+  int* pointerr = new int;
+  *pointerr = 35;
+  cout << *pointerr;
+- this creates a new space for one integer and assigns that hexadecimal values to `pointerr`
+- we dereference the `pointerr` and assign it a value of 35 so when we print the dereference, we get 35
+- bascially, we create a space first and then dereference the space to assign the pointer a value
+- when we create something with `new` we have to remove it when we're dones
+- we can use `delete` keyword to remove `pointerr` by `delete pointerr;`
+- if we forget deleting the space after its use the program will keep on using more and more space and a memory leak will happen
+- `new` and `delete` can also be used with arrays
+- when using with arrays, `new ` and `delete` become `new[]` and `delete[]`
+- manual memory management isn't always required but can be useful when full control over the memory is desired
