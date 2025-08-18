@@ -333,6 +333,8 @@ if (condition){
     - `private` - members cannot be accessed or viewed from outside the class
     - `protected` - members cannot be accessed from outside but can be accessed in inherited classes
     - by default the attributes are `private`
-   
-    ### Encapsulation
-    - 
+    - `private` attributes can be accessed by creating get and set methods
+    - a `friend` function can be used to access `private` attributes
+    - a `friend` function is not a member fo the class,, it is defined outside the class but declared as a friend inside the class: `friend void friend_func_name(class_name class_obj);`
+      
+  ### Inheritance
