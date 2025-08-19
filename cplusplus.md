@@ -409,11 +409,11 @@ if (condition){
   - `<ctime>` library can be used to work with dates and times
   - `time_t` is the datatype to store timestamp values and `struct tm` is for datetime structures
   - timestamps represent the moment in time as a single number from the epoch so that it's easier for computers to do the calculations
-  - The time() function gives us a timestamp representing the current date and time. We can use the ctime() function to show the date and time that a timestamp represents
-  - The time() function writes a timestamp to the memory location given by the parameter, but it also returns the timestamp's value
-  - An alternative way to use the time() function is to pass in a NULL pointer and use the return value instead
+  - The `time()` function gives us a timestamp representing the current date and time. We can use the `ctime()` function to show the date and time that a timestamp represents
+  - The `time()` function writes a timestamp to the memory location given by the parameter, but it also returns the timestamp's value
+  - An alternative way to use the `time()` function is to pass in a `NULL` pointer and use the return value instead
   - we can create a timestamp for any date using `mktime()` instead of `time()`
-  - The mktime() function needs these members to have a value: tm_year, tm_mon, tm_mday, tm_hour, tm_min, tm_sec and tm_isdst.
+  - The `mktime()` function needs these members to have a value: `tm_year`, `tm_mon`, `tm_mday`, `tm_hour`, `tm_min`, `tm_sec` and `tm_isdst`.
   - setting `tm_isdst` to -1 means we want to use the computer's timezone setting
-  - The ctime() and asctime() functions allow us to display the date but they do not allow us to choose how it is displayed. To choose how a date is displayed we can use the strftime() function.
+  - The `ctime()` and `asctime()` functions allow us to display the date but they do not allow us to choose how it is displayed. To choose how a date is displayed we can use the `strftime()` function.
   - `strftime()` formats a date as a C-style string into an array
