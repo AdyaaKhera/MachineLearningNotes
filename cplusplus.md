@@ -338,3 +338,82 @@ if (condition){
     - a `friend` function is not a member fo the class,, it is defined outside the class but declared as a friend inside the class: `friend void friend_func_name(class_name class_obj);`
       
   ### Inheritance
+  - one class reusing the attributes and methods of another class
+  - there's a parent class and a child class with the child class being the one that inherits its properties from the parent class
+  - to make a child class `:` is used
+    ```C++
+    class parent {
+      public:
+        void message() {
+          cout << "I'm the parent class";
+        }
+    };
+
+    class child : public parent {
+      public:
+        //child class specific attributes and methods
+    };
+  - when a class is derived from an already derived class, it is known as multilevel inheritence
+  - a child class can also be derived from multiple base classes
+  ```C++
+  class child : public firstclass, public secondclass {
+    public:
+      //this class derives its attributes and methods from first and second class
+  };
+  ```
+  - protected attributes and methods can be inherited by child classes
+
+  ### Polymorphism
+  - polymorphism is the same attribute / method behaving differently for each child class
+
+    ### Virtual Functions
+    - virtual function is the base class function that can be overriden in derived classes
+    - without specifying a `virtual` function, the original function from the parent class would be called
+    - virtual functions are key to using polymorphism
+    - to use virtual functions, just use `virtual` keyword when declaring functions in parent class and `override` after function name in child class (`override` part is optional)
+    - the `->` operator is used to access members of a class through a pointer so we can say `pointerr->classfunc();` or we can dereference the pointer and then user the function: `*pointerr.classfunc();`
+
+  ### Templates
+  - a function or class that works with different data types
+  ```C++
+  template <typename T>
+  return_type function_name(T parameter) {
+    // code
+  }
+  ```
+  - T is a datatype placeholder
+  - these templates can be used by: `function_name<typename>(parameter)`
+  - just like a function we can create a template for a class and write the methods and other attributes using T
+
+## Files
+  - `<fstream` library can be used to work with files
+  - both `<iostream>` and `<fstream>` are required
+  - `ofstream`, `ifstream` and `fstream` classes are used from the `<fstream>` library to create, write and ride files
+  - to write to a file:
+  ```C++
+  ofstream filenamevar("filename.txt");
+  filenamevar << "something I wanna add to the file";
+  filenamevar.close();
+  ```
+  - to read from a file:
+  ```C++
+  string filetext;
+  ifstream filenamevar("filename.txt");
+  while (getline(filenamevar, filetext)) {
+    cout << filetext;
+  }
+  filenamevar.close();
+  ```
+
+## Date and Time
+  - `<ctime>` library can be used to work with dates and times
+  - `time_t` is the datatype to store timestamp values and `struct tm` is for datetime structures
+  - timestamps represent the moment in time as a single number from the epoch so that it's easier for computers to do the calculations
+  - The time() function gives us a timestamp representing the current date and time. We can use the ctime() function to show the date and time that a timestamp represents
+  - The time() function writes a timestamp to the memory location given by the parameter, but it also returns the timestamp's value
+  - An alternative way to use the time() function is to pass in a NULL pointer and use the return value instead
+  - we can create a timestamp for any date using `mktime()` instead of `time()`
+  - The mktime() function needs these members to have a value: tm_year, tm_mon, tm_mday, tm_hour, tm_min, tm_sec and tm_isdst.
+  - setting `tm_isdst` to -1 means we want to use the computer's timezone setting
+  - The ctime() and asctime() functions allow us to display the date but they do not allow us to choose how it is displayed. To choose how a date is displayed we can use the strftime() function.
+  - `strftime()` formats a date as a C-style string into an array
