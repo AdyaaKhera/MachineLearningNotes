@@ -417,3 +417,21 @@ if (condition){
   - setting `tm_isdst` to -1 means we want to use the computer's timezone setting
   - The `ctime()` and `asctime()` functions allow us to display the date but they do not allow us to choose how it is displayed. To choose how a date is displayed we can use the `strftime()` function.
   - `strftime()` formats a date as a C-style string into an array
+
+## Exception Handling
+  - `try`, `throw` and `catch` can be used to handle exceptions
+  - `try` defines the code that may give an error
+  - `throw` triggers an exception
+  - `catch` handles the error
+    ```C++
+    try {
+      // Code that may throw an exception
+      throw 505;
+    }
+    catch (int errorCode) {
+      cout << "Error occurred: " << errorCode;
+    }
+  - If you do not know the throw type used in the try block, you can use the "three dots" syntax (...) inside the catch block, which will handle any type of exception: `catch (...) {}`
+
+## Data Structures  
+  -
