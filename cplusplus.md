@@ -510,3 +510,23 @@ if (condition){
     - You can loop through a map with the for-each loop
     - we should use the auto keyword to automatically determine the correct data type for each key-value pair
     - Since map elements consist of both keys and values, we have to include `.first` to access the keys, and `.second` to access values in the loop.
+   
+    ### Iterators
+    - to iterate through a vector, we first have to create a vector iterator, `vector<string>::iterator it;`
+    - after the iterator has been created we loop through the vector with the iterator, `for (it = vectorname.begin(); it != vectorname.end(); ++it) {}`
+    - the type of iterator must match the type of data structure it refers to
+    - iterators are like pointers and instead ofreturning values, they refer to a specific position
+    - when we just have to access the elements from these data structures, it's easier to use the for-each loop but when we have to modify the elements using iteration, we should use iterators
+    - to iterate in reverse order we can use `rbegin()` and `rend()`
+    - instead of creating an iterator first by specifying its type we can just use `auto` in for loop
+
+    ### Algorithms
+    - algorithms are used to solve problems by sorting, searching and manipulating data structures
+    - we can include the `<algorithm>` library to use some of these functions
+    - the `sort()` function takes in two iterators: a start and an end as its parameters. By default, they are sorted in ascending order
+    - to use the reverse order, we can use `rbegin()` and `rend()` as the parameters for `sort()`
+    - `find()` function can be used to search for specific elements. It takes three parameters: start iterator, end iterator and value where the value represents the value to search for
+    - To search for the first element that is greater than a specific value, we can use the `upper_bound()` function instead of `find()`
+    - `upper_bound()` is typically used on sorted data structures so we use the `sort()` function before using `upper_bound()`
+    - to find the smallest element, we use `min_element()` and to find the largest, we use `max_element()`. We don't have to sort beforehand when using these
+    - to fill all elements in a vector with a value, we can use `fill()` function like `fill(vectorname.begin(), vectorname.end(), value_to_fill_the_vector_with);`
