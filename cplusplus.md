@@ -1,5 +1,75 @@
 # C++
 
+## Index
+
+1. **[C++ Basics](#c)**  
+   - [Input and Output](#input-and-output)  
+   - [Data Types](#data-types)  
+       - [Strings](#strings)  
+
+2. **[Operators & Math](#operators)**  
+   - [Operators](#operators)  
+   - [Math Functions](#math)  
+
+3. **[Control Flow](#conditionals)**  
+   - [Conditionals (`if`, `switch`)](#conditionals)  
+   - [Loops (`while`, `do-while`, `for`, `foreach`)](#loops)  
+
+4. **[Data Containers](#arrays)**  
+   - [Arrays](#arrays)  
+   - [Multidimensional Arrays](#multidimensional-arrays)  
+   - [Vectors](#data-structures)  
+
+5. **[User-Defined Types](#structures-or-structs)**  
+   - [Structures (Structs)](#structures-or-structs)  
+   - [Enumeration (enum)](#enumeration-enum)  
+
+6. **[Memory Concepts](#references)**  
+   - [References](#references)  
+   - [Memory Address](#memory-address)  
+   - [Pointers](#pointers)  
+   - [Dereferencing](#dereference)  
+   - [Memory Management (`new`, `delete`)](#memory-management)  
+
+7. **[Functions](#functions)**  
+   - [Function Basics](#functions)  
+   - [Pass by Reference](#pass-by-reference)  
+   - [Function Overloading](#function-overloading)  
+   - [Lambda Functions](#lambda-functions)  
+
+8. **[Object-Oriented Programming (OOP)](#oop)**  
+   - [Classes & Objects](#oop)  
+   - [Class Methods](#class-methods)  
+   - [Constructors](#constructors)  
+   - [Access Specifiers](#access-specifiers)  
+   - [Inheritance](#inheritance)  
+   - [Polymorphism](#polymorphism)  
+     - [Virtual Functions](#virtual-functions)  
+   - [Templates](#templates)  
+
+9. **[File Handling](#files)**  
+   - [Writing to Files](#files)  
+   - [Reading from Files](#files)  
+
+10. **[Date and Time](#date-and-time)**  
+    - [Timestamps](#date-and-time)  
+    - [Formatting Dates](#date-and-time)  
+
+11. **[Exception Handling](#exception-handling)**  
+
+12. **[Data Structures (STL)](#data-structures)**  
+    - [Vector](#vector)  
+    - [List](#list)  
+    - [Stack](#stack)  
+    - [Queue](#queue)  
+    - [Deque](#deque)  
+    - [Set](#sets)  
+    - [Map](#map)  
+    - [Iterators](#iterators)  
+    - [Algorithms](#algorithms)  
+
+13. **[Namespaces](#namespaces)**
+
 ## Input and Output
 - All c++ statements end with a semi colon
 ```C++
