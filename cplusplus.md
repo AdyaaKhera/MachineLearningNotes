@@ -499,3 +499,14 @@ if (condition){
     - to remove all elements from the set we can use `.clear()`
 
     ### Map
+    - a map is just like a dictionary, it stores values in the form of key/value pairs
+    - elements are accessible by keys and not indices
+    - each key is unique
+    - the elements are automatically sorted in ascending order by the keys
+    - to create a map, we have to include the `<map>` header and use `map<keytype, valuetype> mapname;`
+    - the elements of a map can be added at the time of map declaration like `map<string, string> mymap = {{"firstKey","firstvallue"},{"secondkey","secondvalue"}};`
+    - we can use `[]` or `.insert()` to add new values to the map
+    - `.erase()` can be used to remove a value and `.clear()` can be used to remove all values from the map
+    - You can loop through a map with the for-each loop
+    - we should use the auto keyword to automatically determine the correct data type for each key-value pair
+    - Since map elements consist of both keys and values, we have to include `.first` to access the keys, and `.second` to access values in the loop.
