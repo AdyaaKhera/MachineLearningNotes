@@ -491,7 +491,7 @@ if (condition){
     - they are sorted automatically in ascending order
     - elements can be added or removed but the values of an existing element cannot be changed
     - cannot be accessed using the index numbers because the order is determined by automatic sorting
-    - the `<set>`` header file is required to create a set
+    - the `<set>` header file is required to create a set
     - elements can be added in a set at the time of declaration
     - if we want to change the sort to descending order we can do by during the time of the set declaration by using `set<int, greater<type>> setname = {};`
     - the specified type in `greater` must match the type of the set
