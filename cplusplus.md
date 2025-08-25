@@ -434,4 +434,68 @@ if (condition){
   - If you do not know the throw type used in the try block, you can use the "three dots" syntax (...) inside the catch block, which will handle any type of exception: `catch (...) {}`
 
 ## Data Structures  
-  -
+  - the various data structures are a part of C++ STL which stands for the Standard Template Library
+    
+    ### Vector
+    - vectors are resizable arrays
+    - they are used to store elements of the same datatype
+    - `#include <vector>` needs to be included in the code to use vectors
+    - the way to create a vector is `vector<type> vectorname;`
+    - we use `{}` to declare the values of the vector
+    - we can use indexing to access the elements of the vector, starting from 0
+    - the first and last elements of the vector can be accessed using the functions `.front()` and `.back()` from the `<vector>` library
+    - we can also use the `.at()` function to access an element at a specified index number
+    - it is always safer to use the `.at()` function because it displays an error if a certain index doesn't exist
+    - using the `.push_back()` function we can add an element at the end of the vector
+    - to remove an element from the back of the vector we can use `.pop_back()`
+    - `.size()` function can be used to know the size of an array and `.empty()` function can be used to check if it's empty or not. If the vector is empty it will return `1` else `0`
+
+    ### List
+    - we can add or remove elemnts from both ends in a list unlike a vector which only supports add or remove at the end of the vector
+    - list does not support random access so we cannot directly jump from one index to a specific index
+    - to use this datatype, we have to include the `<list>` header file
+    - a list can be created by `list<type> listname;`
+    - the elements of a list are declared in `{}`
+    - the datatype of the elements of a list cannot be changed after it has been declared
+    - indexing **cannot** be used to access elements of a list
+    - we can still access first and last elements of the list using `.front()` and `.back()` functions
+    - `.push_front()` and `.push_back()` are the functions used to add elements at the front and back and `.pop_front()` and `.pop_back()` are the functions that can be used to remove the elements from front and back
+
+    ### Stack
+    - a stack stores elements in a specific order called LIFO (last in first out)
+    - elements cannot be accessed by index numbers
+    - we can only access the element at the top of the stack
+    - the `<stack>` header file needs to be included in order to use stacks
+    - to create a stack we use `stack<type> stackname;`
+    - we cannot add elements to the stack at the time of the declaration unlike with vectors or list
+    - we have to use the `.push()` function everytime to add an element to the top of the stack
+    - we can only access the top most element using the `.top()` function
+    - the `.pop()` function can be used to remove the top most element from the stack
+
+    ### Queue
+    - queues store values in the order called FIFO (first in first out)
+    - elements cannot be accessed by index numbers
+    - elements are added at the end and removed from the front so only those two elements are accessible at all times
+    - `<queue>` header file needs to be included for this data structure and they can be created by using `queue<type> queuename;`
+    - elements cannot be added to a queue at the time of declaration
+
+    ### Deque
+    - a deque is a double ended queue
+    - elements from a deque can be added and removed from both ends
+    - elements can be accessed by index numbers
+    - to use deque, we have to include the `<deque>` header file and a deque can be created by `deque<type> dequename;`
+    - elements can be added in a deque at the time of declaration
+
+    ### Sets
+    - a set is a data structure of unique elements
+    - they are sorted automatically in ascending order
+    - elements can be added or removed but the values of an existing element cannot be changed
+    - cannot be accessed using the index numbers because the order is determined by automatic sorting
+    - the `<set>`` header file is required to create a set
+    - elements can be added in a set at the time of declaration
+    - if we want to change the sort to descending order we can do by during the time of the set declaration by using `set<int, greater<type>> setname = {};`
+    - the specified type in `greater` must match the type of the set
+    - to add elements to a set we can use the `.insert()` function and to remove an elements, we can use the `.erase()`
+    - to remove all elements from the set we can use `.clear()`
+
+    ### Map
