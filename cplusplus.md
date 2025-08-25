@@ -2,43 +2,27 @@
 
 ## Index
 
-1. **[C++ Basics](#c)**  
-   - [Input and Output](#input-and-output)  
-   - [Data Types](#data-types)  
-       - [Strings](#strings)  
-
-2. **[Operators & Math](#operators)**  
-   - [Operators](#operators)  
-   - [Math Functions](#math)  
-
-3. **[Control Flow](#conditionals)**  
-   - [Conditionals (`if`, `switch`)](#conditionals)  
-   - [Loops (`while`, `do-while`, `for`, `foreach`)](#loops)  
-
-4. **[Data Containers](#arrays)**  
-   - [Arrays](#arrays)  
+1. **[Input and Output](#input-and-output)**
+2. **[Data Types](#data-types)**
+   - [Strings](#strings)  
+3. **[Operators](#operators)**
+4. **[Math Functions](#math)**  
+5. **[Conditionals](#conditionals)**
+6. **[Loops](#loops)**  
+7. **[Arrays](#arrays)**  
    - [Multidimensional Arrays](#multidimensional-arrays)  
-   - [Vectors](#data-structures)  
-
-5. **[User-Defined Types](#structures-or-structs)**  
-   - [Structures (Structs)](#structures-or-structs)  
-   - [Enumeration (enum)](#enumeration-enum)  
-
-6. **[Memory Concepts](#references)**  
-   - [References](#references)  
-   - [Memory Address](#memory-address)  
-   - [Pointers](#pointers)  
-   - [Dereferencing](#dereference)  
-   - [Memory Management (`new`, `delete`)](#memory-management)  
-
-7. **[Functions](#functions)**  
-   - [Function Basics](#functions)  
+8. **[Structures (Structs)](#structures-or-structs)**
+9. **[Enumeration (enum)](#enumeration-enum)**  
+10. **[References](#references)**
+11. **[Memory Address](#memory-address)**
+12. **[Pointers](#pointers)**
+13. **[Dereferencing](#dereference)**
+14. **[Memory Management (`new`, `delete`)](#memory-management)**
+15. **[Functions](#functions)**  
    - [Pass by Reference](#pass-by-reference)  
    - [Function Overloading](#function-overloading)  
-   - [Lambda Functions](#lambda-functions)  
-
-8. **[Object-Oriented Programming (OOP)](#oop)**  
-   - [Classes & Objects](#oop)  
+   - [Lambda Functions](#lambda-functions)
+16. **[Object-Oriented Programming (OOP)](#oop)**   
    - [Class Methods](#class-methods)  
    - [Constructors](#constructors)  
    - [Access Specifiers](#access-specifiers)  
@@ -46,18 +30,14 @@
    - [Polymorphism](#polymorphism)  
      - [Virtual Functions](#virtual-functions)  
    - [Templates](#templates)  
-
-9. **[File Handling](#files)**  
+17. **[File Handling](#files)**  
    - [Writing to Files](#files)  
    - [Reading from Files](#files)  
-
-10. **[Date and Time](#date-and-time)**  
+18. **[Date and Time](#date-and-time)**  
     - [Timestamps](#date-and-time)  
     - [Formatting Dates](#date-and-time)  
-
-11. **[Exception Handling](#exception-handling)**  
-
-12. **[Data Structures (STL)](#data-structures)**  
+19. **[Exception Handling](#exception-handling)**  
+20. **[Data Structures (STL)](#data-structures)**  
     - [Vector](#vector)  
     - [List](#list)  
     - [Stack](#stack)  
@@ -67,8 +47,7 @@
     - [Map](#map)  
     - [Iterators](#iterators)  
     - [Algorithms](#algorithms)  
-
-13. **[Namespaces](#namespaces)**
+21. **[Namespaces](#namespaces)**
 
 ## Input and Output
 - All c++ statements end with a semi colon
@@ -286,7 +265,7 @@ if (condition){
 - **the type of pointer has to match the type of the variable**
 - when we change the pointer value, it changes the value of the original variable
 
-  ### Dereference
+## Dereference
   - a pointer stores the memory address of a variable but we can use `*`, the dereference operator, with a pointer to get the variable value
     ```C++
     string something = "something";
