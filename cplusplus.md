@@ -530,3 +530,8 @@ if (condition){
     - `upper_bound()` is typically used on sorted data structures so we use the `sort()` function before using `upper_bound()`
     - to find the smallest element, we use `min_element()` and to find the largest, we use `max_element()`. We don't have to sort beforehand when using these
     - to fill all elements in a vector with a value, we can use `fill()` function like `fill(vectorname.begin(), vectorname.end(), value_to_fill_the_vector_with);`
+
+## Namespaces
+- a namespace is a way to group related code together under a name
+- a namespace is like a folder and it can avoid naming conflicts in the program as it keeps growing
+- if we don't want to keep referring to the namespace name while using its variable we can just add `using namespace namespacename;` in the code however its better to use the variables from a namespace as `namespacename::variablename`
